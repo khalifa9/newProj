@@ -1,5 +1,6 @@
 package com.example.mahmoud.newproj;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Button b;
         b = (Button)findViewById(R.id.button);
         b.setOnClickListener(new View.OnClickListener() {
+            @SuppressLint("MissingPermission")
             public void onClick(View v){
                 Uri numTel = Uri.parse("tel:0649287360");
                 Intent call = new Intent(Intent.ACTION_CALL,numTel);
